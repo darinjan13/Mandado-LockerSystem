@@ -18,6 +18,7 @@ namespace Mandado_LockerSystem
             FillDataGrid();
         }
 
+        //Mao ni ang method para makuha nimo ang mga users gikan sa database
         private void FillDataGrid()
         {
             string sql = "SELECT * FROM users";
@@ -29,6 +30,7 @@ namespace Mandado_LockerSystem
             Application.Exit();
         }
 
+        //Kani mao ni ang mo butang ug value sa textboxes everytime mo click kag users sa datagridview
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
@@ -42,12 +44,14 @@ namespace Mandado_LockerSystem
                 txtphonenumber.Text = dataGridView1[6, e.RowIndex].Value.ToString();
                 txtpassword.Text = dataGridView1[7, e.RowIndex].Value.ToString();
                 txtrole.Text = dataGridView1[8, e.RowIndex].Value.ToString();
+                ownsALocker.Checked = (bool)dataGridView1[9, e.RowIndex].Value;
             }
         }
 
+        //Button para maka create ug account
         private void createBtn_Click(object sender, EventArgs e)
         {
-            string sql = "INSERT INTO users (firstname, lastname, idnumber, gender, age, phonenumber, [password], role) VALUES ('" + txtfirstname.Text + "', '" + txtlastname.Text + "', " + txtidnumber.Text + ", '" + txtgender.Text + "', " + txtage.Text + ", " + txtphonenumber.Text + ", '" + txtpassword.Text + "', '" + txtrole.Text + "')"; ;
+            string sql = "INSERT INTO users (firstname, lastname, idnumber, gender, age, phonenumber, [password], role, ownsALocker) VALUES ('" + txtfirstname.Text + "', '" + txtlastname.Text + "', " + txtidnumber.Text + ", '" + txtgender.Text + "', " + txtage.Text + ", " + txtphonenumber.Text + ", '" + txtpassword.Text + "', '" + txtrole.Text + "', " + ownsALocker.Checked + ")"; ;
             if (DBHelper.DBHelper.ModifyRecord(sql))
             {
                 MessageBox.Show("Registered Successfuly.");
@@ -55,22 +59,31 @@ namespace Mandado_LockerSystem
             }
         }
 
+        //Para update
         private void updateBtn_Click(object sender, EventArgs e)
         {
-            string sql = "UPDATE users SET firstname = '" + txtfirstname.Text + "', lastname = '" + txtlastname.Text + "', idnumber = " + txtidnumber.Text + ", gender = '" + txtgender.Text + "', age = " + txtage.Text + ", phonenumber = " + txtphonenumber.Text + ", [password] = '" + txtpassword.Text + "', role = '" + txtrole.Text + "' WHERE ID = " + Convert.ToInt32(txtid.Text);
+            string sql = "UPDATE users SET firstname = '" + txtfirstname.Text + "', lastname = '" + txtlastname.Text + "', idnumber = " + txtidnumber.Text + ", gender = '" + txtgender.Text + "', age = " + txtage.Text + ", phonenumber = " + txtphonenumber.Text + ", [password] = '" + txtpassword.Text + "', role = '" + txtrole.Text + "', ownsALocker = " + ownsALocker.Checked + " WHERE ID = " + Convert.ToInt32(txtid.Text);
             if (DBHelper.DBHelper.ModifyRecord(sql))
             {
+                if (!ownsALocker.Checked)
+                {
+                    sql = "UPDATE lockers SET idnumber = 0, available = true WHERE idnumber = " + txtidnumber.Text;
+                    DBHelper.DBHelper.ModifyRecord(sql);
+                }
                 MessageBox.Show("Updated Successfuly.");
                 FillDataGrid();
             }
         }
 
+        //Para delete
         private void deleteBtn_Click(object sender, EventArgs e)
         {
             string sql = "DELETE FROM users WHERE ID = " + txtid.Text;
             if (DBHelper.DBHelper.ModifyRecord(sql))
             {
+                sql = "UPDATE lockers SET idnumber = 0, available = true WHERE idnumber = " + txtidnumber.Text;
                 MessageBox.Show("Deleted Successfuly.");
+                DBHelper.DBHelper.ModifyRecord(sql);
                 FillDataGrid();
             }
         }
@@ -80,6 +93,46 @@ namespace Mandado_LockerSystem
             Login login = new Login();
             login.Show();
             this.Hide();
+        }
+
+        //Search button ni
+        private void searchBtn_Click(object sender, EventArgs e)
+        {
+            //Diri ma save ang sud sa textbox nga para gamiton sa pag search
+            string searchText = searchBox.Text;
+            //Kani mao ni ang searchby nga naa kilid sa search nga textbox
+            string searchBy = searchByBox.Text;
+            string sql;
+
+            switch (searchBy) 
+            {
+                //Kani sila mao ni ilhanan if unsa imo e search like firstname ba or lastname
+                case "firstname":
+                    sql = "SELECT * FROM users WHERE firstname LIKE '" + searchText + "'";
+                    DBHelper.DBHelper.fill(sql, dataGridView1);
+                    break;
+                case "lastname":
+                    sql = "SELECT * FROM users WHERE lastname LIKE '" + searchText + "'";
+                    DBHelper.DBHelper.fill(sql, dataGridView1);
+                    break;
+                case "idnumber":
+                    sql = "SELECT * FROM users WHERE idnumber LIKE " + Convert.ToInt32(searchText);
+                    DBHelper.DBHelper.fill(sql, dataGridView1);
+                    break;
+                case "gender":
+                    sql = "SELECT * FROM users WHERE gender LIKE '" + searchText + "'";
+                    DBHelper.DBHelper.fill(sql, dataGridView1);
+                    break;
+                case "age":
+                    sql = "SELECT * FROM users WHERE age LIKE " + Convert.ToInt32(searchText);
+                    DBHelper.DBHelper.fill(sql, dataGridView1);
+                    break;
+                case "phonenumber":
+                    sql = "SELECT * FROM users WHERE phonenumber LIKE " + Convert.ToInt32(searchText);
+                    DBHelper.DBHelper.fill(sql, dataGridView1);
+                    break;
+
+            }
         }
     }
 }

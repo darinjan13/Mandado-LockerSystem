@@ -21,9 +21,10 @@ namespace Mandado_LockerSystem
             InitializeComponent();
         }
 
+        //Registre button
         private void register()
         {
-                string sql = "INSERT INTO users (firstname, lastname, idnumber, gender, age, phonenumber, [password], role) VALUES ('" + txtfirstname.Text + "', '" + txtlastname.Text + "', " + txtidnumber.Text + ", '" + txtgender.Text + "', " + txtage.Text + ", " + txtphonenumber.Text + ", '" + txtpassword.Text + "', 'student')";
+                string sql = "INSERT INTO users (firstname, lastname, idnumber, gender, age, phonenumber, [password], role, ownsALocker) VALUES ('" + txtfirstname.Text + "', '" + txtlastname.Text + "', " + txtidnumber.Text + ", '" + txtgender.Text + "', " + txtage.Text + ", " + txtphonenumber.Text + ", '" + txtpassword.Text + "', 'student', false)";
                 if(DBHelper.DBHelper.ModifyRecord(sql))
                 {
                     ClearForm();
@@ -31,7 +32,7 @@ namespace Mandado_LockerSystem
                 }
         }
 
-
+        //Para clear ni sa textbox after ka mo register
         public void ClearForm()
         {
             txtfirstname.Clear();
@@ -52,7 +53,6 @@ namespace Mandado_LockerSystem
         {
             DialogResult result = MessageBox.Show("Are you sure you want to exit?", "Exit Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            // If the user clicks Yes, close the application
             if (result == DialogResult.Yes)
             {
                 System.Windows.Forms.Application.Exit();

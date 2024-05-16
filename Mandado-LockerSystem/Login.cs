@@ -39,16 +39,14 @@ namespace Mandado_LockerSystem
                     timer1.Interval = 1;
                     progressBar1.Maximum = 200;
                     timer1.Tick += new EventHandler(timer1_Tick);
-                    
+                Connection.Connection.conn.Close();
+
                 }
                 else
                 {
                     MessageBox.Show("Invalid Username and Password");
-
                 }
-
                 
-                Connection.Connection.conn.Close();
             }
             catch (Exception ex)
             {

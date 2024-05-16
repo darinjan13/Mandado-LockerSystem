@@ -16,8 +16,13 @@ namespace Mandado_LockerSystem.DBHelper
         public static OleDbConnection conn;
         public static OleDbCommand command;
         public static OleDbDataReader reader;
+
+        public static string firstname = null;
+        public static string lastname = null;
+
         public static int LockerOwner;
         public static bool LockerAvailability;
+        public static bool ownsALocker;
         public static void fill(string q, DataGridView dgv)
         {
             try
@@ -57,12 +62,37 @@ namespace Mandado_LockerSystem.DBHelper
             return result;
         }
 
-        public static void GetRecord(string updates) 
+        //Mao ni ang gigamit nimo sa Lockers para makuha ang info sa ni log in
+        public static void GetInfo(string sql)
         {
             try
             {
                 Connection.Connection.DB();
-                command = new OleDbCommand(updates, Connection.Connection.conn);
+                command = new OleDbCommand(sql, Connection.Connection.conn);
+                reader = command.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    reader.Read();
+                    firstname = reader["firstname"].ToString();
+                    lastname = reader["lastname"].ToString();
+                    ownsALocker = (bool)reader["ownsALocker"];
+                }
+                reader.Close();
+                Connection.Connection.conn.Close();
+            } catch (Exception ex)
+            {
+                Connection.Connection.conn.Close();
+                MessageBox.Show("Error ---->" + sql + ex.Message);
+            }
+        }
+
+        //Mao ni ang gigamit para makuha locker sa ni log in
+        public static void GetRecord(string sql) 
+        {
+            try
+            {
+                Connection.Connection.DB();
+                command = new OleDbCommand(sql, Connection.Connection.conn);
                 reader = command.ExecuteReader();
                 if (reader.HasRows)
                 {
@@ -75,7 +105,7 @@ namespace Mandado_LockerSystem.DBHelper
             } catch (Exception ex)
             {
                 Connection.Connection.conn.Close();
-                MessageBox.Show("Error ---->" + updates + ex.Message);
+                MessageBox.Show("Error ---->" + sql + ex.Message);
             }
         }
 

@@ -156,6 +156,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Mandado_LockerSystem.Properties.Resources.LOGINFORM;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(850, 580);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.label5);
@@ -166,6 +167,7 @@
             this.Controls.Add(this.txtpassword);
             this.Controls.Add(this.txtidnumber);
             this.Controls.Add(this.progressBar1);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

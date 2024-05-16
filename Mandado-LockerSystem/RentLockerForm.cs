@@ -24,11 +24,16 @@ namespace Mandado_LockerSystem
             this.pictureBox = pictureBox;
         }
 
+        //Mao ni if ganahan siya kuhaon ang locker
         private void btnConfirm_Click(object sender, EventArgs e)
         {
             string sql = "UPDATE lockers SET idnumber = " + idnumber + ", available = " + false + " where ID = " + locker;
             if (DBHelper.DBHelper.ModifyRecord(sql))
-                MessageBox.Show("Rented Successfuly");
+            {
+                MessageBox.Show("Taken Successfuly");
+                sql = "UPDATE users SET ownsALocker = true WHERE idnumber = " + idnumber;
+                DBHelper.DBHelper.ModifyRecord(sql);
+            }
             this.Close();
             pictureBox.Image = Resources.NotAvailableLocker;
         }
@@ -42,7 +47,6 @@ namespace Mandado_LockerSystem
         {
             DialogResult result = MessageBox.Show("Are you sure you want to exit?", "Exit Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            // If the user clicks Yes, close the application
             if (result == DialogResult.Yes)
             {
                 System.Windows.Forms.Application.Exit();

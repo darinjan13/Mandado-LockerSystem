@@ -18,6 +18,7 @@ namespace Mandado_LockerSystem
         {
             InitializeComponent();
             this.pictureBox = pictureBox;
+            label1.Text = "Welcome! " + DBHelper.DBHelper.firstname;
         }
 
         private void cancelBtn_Click(object sender, EventArgs e)
@@ -25,11 +26,14 @@ namespace Mandado_LockerSystem
             this.Close();
         }
 
+        //Mao ni if ganahan ka buhi an ang locker nimo
         private void confirmBtn_Click(object sender, EventArgs e)
         {
-            string sql = "UPDATE lockers SET available = true WHERE idnumber = " + DBHelper.DBHelper.LockerOwner;
+            string sql = "UPDATE lockers SET idnumber = 0, available = true WHERE idnumber = " + DBHelper.DBHelper.LockerOwner;
             if (DBHelper.DBHelper.ModifyRecord(sql))
             {
+                sql = "UPDATE users SET ownsALocker = false";
+                DBHelper.DBHelper.ModifyRecord(sql);
                 MessageBox.Show("Locker is not yours now.");
                 pictureBox.Image = Resources.AvailableLocker;
                 this.Close();
