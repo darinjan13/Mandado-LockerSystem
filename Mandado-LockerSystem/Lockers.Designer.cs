@@ -81,7 +81,7 @@
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnExit.Location = new System.Drawing.Point(813, -2);
+            this.btnExit.Location = new System.Drawing.Point(764, 0);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(39, 36);
             this.btnExit.TabIndex = 16;
@@ -91,19 +91,16 @@
             // 
             // locker1
             // 
-            this.locker1.Image = global::Mandado_LockerSystem.Properties.Resources.AvailableLocker;
-            this.locker1.Location = new System.Drawing.Point(112, 276);
+            this.locker1.Location = new System.Drawing.Point(71, 234);
             this.locker1.Name = "locker1";
             this.locker1.Size = new System.Drawing.Size(61, 123);
-            this.locker1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.locker1.TabIndex = 0;
             this.locker1.TabStop = false;
             this.locker1.Click += new System.EventHandler(this.locker1_Click);
             // 
             // locker2
             // 
-            this.locker2.Image = global::Mandado_LockerSystem.Properties.Resources.AvailableLocker;
-            this.locker2.Location = new System.Drawing.Point(179, 276);
+            this.locker2.Location = new System.Drawing.Point(138, 234);
             this.locker2.Name = "locker2";
             this.locker2.Size = new System.Drawing.Size(61, 123);
             this.locker2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -113,8 +110,7 @@
             // 
             // locker3
             // 
-            this.locker3.Image = global::Mandado_LockerSystem.Properties.Resources.AvailableLocker;
-            this.locker3.Location = new System.Drawing.Point(246, 276);
+            this.locker3.Location = new System.Drawing.Point(205, 234);
             this.locker3.Name = "locker3";
             this.locker3.Size = new System.Drawing.Size(61, 123);
             this.locker3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -124,8 +120,7 @@
             // 
             // locker4
             // 
-            this.locker4.Image = global::Mandado_LockerSystem.Properties.Resources.AvailableLocker;
-            this.locker4.Location = new System.Drawing.Point(313, 276);
+            this.locker4.Location = new System.Drawing.Point(272, 234);
             this.locker4.Name = "locker4";
             this.locker4.Size = new System.Drawing.Size(61, 123);
             this.locker4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -135,8 +130,7 @@
             // 
             // locker5
             // 
-            this.locker5.Image = global::Mandado_LockerSystem.Properties.Resources.AvailableLocker;
-            this.locker5.Location = new System.Drawing.Point(380, 276);
+            this.locker5.Location = new System.Drawing.Point(339, 234);
             this.locker5.Name = "locker5";
             this.locker5.Size = new System.Drawing.Size(61, 123);
             this.locker5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -146,8 +140,7 @@
             // 
             // locker6
             // 
-            this.locker6.Image = global::Mandado_LockerSystem.Properties.Resources.AvailableLocker;
-            this.locker6.Location = new System.Drawing.Point(447, 276);
+            this.locker6.Location = new System.Drawing.Point(406, 234);
             this.locker6.Name = "locker6";
             this.locker6.Size = new System.Drawing.Size(61, 123);
             this.locker6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -157,8 +150,7 @@
             // 
             // locker7
             // 
-            this.locker7.Image = global::Mandado_LockerSystem.Properties.Resources.AvailableLocker;
-            this.locker7.Location = new System.Drawing.Point(514, 276);
+            this.locker7.Location = new System.Drawing.Point(473, 234);
             this.locker7.Name = "locker7";
             this.locker7.Size = new System.Drawing.Size(61, 123);
             this.locker7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -168,8 +160,7 @@
             // 
             // locker8
             // 
-            this.locker8.Image = global::Mandado_LockerSystem.Properties.Resources.AvailableLocker;
-            this.locker8.Location = new System.Drawing.Point(581, 276);
+            this.locker8.Location = new System.Drawing.Point(540, 234);
             this.locker8.Name = "locker8";
             this.locker8.Size = new System.Drawing.Size(61, 123);
             this.locker8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -179,8 +170,7 @@
             // 
             // locker9
             // 
-            this.locker9.Image = global::Mandado_LockerSystem.Properties.Resources.AvailableLocker;
-            this.locker9.Location = new System.Drawing.Point(648, 276);
+            this.locker9.Location = new System.Drawing.Point(607, 234);
             this.locker9.Name = "locker9";
             this.locker9.Size = new System.Drawing.Size(61, 123);
             this.locker9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -190,8 +180,7 @@
             // 
             // locker10
             // 
-            this.locker10.Image = global::Mandado_LockerSystem.Properties.Resources.AvailableLocker;
-            this.locker10.Location = new System.Drawing.Point(715, 276);
+            this.locker10.Location = new System.Drawing.Point(674, 234);
             this.locker10.Name = "locker10";
             this.locker10.Size = new System.Drawing.Size(61, 123);
             this.locker10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -201,8 +190,7 @@
             // 
             // locker11
             // 
-            this.locker11.Image = global::Mandado_LockerSystem.Properties.Resources.AvailableLocker;
-            this.locker11.Location = new System.Drawing.Point(112, 405);
+            this.locker11.Location = new System.Drawing.Point(71, 363);
             this.locker11.Name = "locker11";
             this.locker11.Size = new System.Drawing.Size(61, 123);
             this.locker11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -212,8 +200,7 @@
             // 
             // locker12
             // 
-            this.locker12.Image = global::Mandado_LockerSystem.Properties.Resources.AvailableLocker;
-            this.locker12.Location = new System.Drawing.Point(179, 405);
+            this.locker12.Location = new System.Drawing.Point(138, 363);
             this.locker12.Name = "locker12";
             this.locker12.Size = new System.Drawing.Size(61, 123);
             this.locker12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -223,8 +210,7 @@
             // 
             // locker13
             // 
-            this.locker13.Image = global::Mandado_LockerSystem.Properties.Resources.AvailableLocker;
-            this.locker13.Location = new System.Drawing.Point(246, 405);
+            this.locker13.Location = new System.Drawing.Point(205, 363);
             this.locker13.Name = "locker13";
             this.locker13.Size = new System.Drawing.Size(61, 123);
             this.locker13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -234,8 +220,7 @@
             // 
             // locker14
             // 
-            this.locker14.Image = global::Mandado_LockerSystem.Properties.Resources.AvailableLocker;
-            this.locker14.Location = new System.Drawing.Point(313, 405);
+            this.locker14.Location = new System.Drawing.Point(272, 363);
             this.locker14.Name = "locker14";
             this.locker14.Size = new System.Drawing.Size(61, 123);
             this.locker14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -245,8 +230,7 @@
             // 
             // locker15
             // 
-            this.locker15.Image = global::Mandado_LockerSystem.Properties.Resources.AvailableLocker;
-            this.locker15.Location = new System.Drawing.Point(380, 405);
+            this.locker15.Location = new System.Drawing.Point(339, 363);
             this.locker15.Name = "locker15";
             this.locker15.Size = new System.Drawing.Size(61, 123);
             this.locker15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -256,8 +240,7 @@
             // 
             // locker16
             // 
-            this.locker16.Image = global::Mandado_LockerSystem.Properties.Resources.AvailableLocker;
-            this.locker16.Location = new System.Drawing.Point(447, 405);
+            this.locker16.Location = new System.Drawing.Point(406, 363);
             this.locker16.Name = "locker16";
             this.locker16.Size = new System.Drawing.Size(61, 123);
             this.locker16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -267,8 +250,7 @@
             // 
             // locker17
             // 
-            this.locker17.Image = global::Mandado_LockerSystem.Properties.Resources.AvailableLocker;
-            this.locker17.Location = new System.Drawing.Point(514, 405);
+            this.locker17.Location = new System.Drawing.Point(473, 363);
             this.locker17.Name = "locker17";
             this.locker17.Size = new System.Drawing.Size(61, 123);
             this.locker17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -278,8 +260,7 @@
             // 
             // locker18
             // 
-            this.locker18.Image = global::Mandado_LockerSystem.Properties.Resources.AvailableLocker;
-            this.locker18.Location = new System.Drawing.Point(581, 405);
+            this.locker18.Location = new System.Drawing.Point(540, 363);
             this.locker18.Name = "locker18";
             this.locker18.Size = new System.Drawing.Size(61, 123);
             this.locker18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -289,8 +270,7 @@
             // 
             // locker19
             // 
-            this.locker19.Image = global::Mandado_LockerSystem.Properties.Resources.AvailableLocker;
-            this.locker19.Location = new System.Drawing.Point(648, 405);
+            this.locker19.Location = new System.Drawing.Point(607, 363);
             this.locker19.Name = "locker19";
             this.locker19.Size = new System.Drawing.Size(61, 123);
             this.locker19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -300,8 +280,7 @@
             // 
             // locker20
             // 
-            this.locker20.Image = global::Mandado_LockerSystem.Properties.Resources.AvailableLocker;
-            this.locker20.Location = new System.Drawing.Point(715, 405);
+            this.locker20.Location = new System.Drawing.Point(674, 363);
             this.locker20.Name = "locker20";
             this.locker20.Size = new System.Drawing.Size(61, 123);
             this.locker20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -311,19 +290,21 @@
             // 
             // label1
             // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(301, 196);
+            this.label1.Location = new System.Drawing.Point(258, 163);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(242, 41);
+            this.label1.Size = new System.Drawing.Size(268, 41);
             this.label1.TabIndex = 39;
             this.label1.Text = "Available Lockers";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Lockers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(850, 580);
+            this.ClientSize = new System.Drawing.Size(803, 552);
             this.Controls.Add(this.locker1);
             this.Controls.Add(this.locker2);
             this.Controls.Add(this.locker3);

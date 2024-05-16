@@ -30,9 +30,9 @@
         {
             this.btnExit = new System.Windows.Forms.Button();
             this.btnConfirm = new System.Windows.Forms.Button();
-            this.lockerNumber = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cancelBtn = new System.Windows.Forms.Button();
+            this.lockerNumber = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnExit
@@ -53,28 +53,22 @@
             // 
             // btnConfirm
             // 
-            this.btnConfirm.Location = new System.Drawing.Point(490, 317);
+            this.btnConfirm.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnConfirm.FlatAppearance.BorderSize = 0;
+            this.btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirm.Location = new System.Drawing.Point(346, 265);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(75, 23);
             this.btnConfirm.TabIndex = 18;
             this.btnConfirm.Text = "CONFIRM";
-            this.btnConfirm.UseVisualStyleBackColor = true;
+            this.btnConfirm.UseVisualStyleBackColor = false;
             this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
-            // 
-            // lockerNumber
-            // 
-            this.lockerNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lockerNumber.Location = new System.Drawing.Point(287, 108);
-            this.lockerNumber.Name = "lockerNumber";
-            this.lockerNumber.Size = new System.Drawing.Size(278, 27);
-            this.lockerNumber.TabIndex = 19;
-            this.lockerNumber.Text = "label1";
-            this.lockerNumber.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(287, 188);
+            this.label1.Location = new System.Drawing.Point(143, 192);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(278, 27);
             this.label1.TabIndex = 20;
@@ -83,25 +77,41 @@
             // 
             // cancelBtn
             // 
-            this.cancelBtn.Location = new System.Drawing.Point(292, 317);
+            this.cancelBtn.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cancelBtn.FlatAppearance.BorderSize = 0;
+            this.cancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancelBtn.Location = new System.Drawing.Point(148, 265);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(75, 23);
             this.cancelBtn.TabIndex = 21;
             this.cancelBtn.Text = "Cancel";
-            this.cancelBtn.UseVisualStyleBackColor = true;
+            this.cancelBtn.UseVisualStyleBackColor = false;
             this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
+            // 
+            // lockerNumber
+            // 
+            this.lockerNumber.BackColor = System.Drawing.Color.Transparent;
+            this.lockerNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lockerNumber.Location = new System.Drawing.Point(143, 143);
+            this.lockerNumber.Name = "lockerNumber";
+            this.lockerNumber.Size = new System.Drawing.Size(278, 27);
+            this.lockerNumber.TabIndex = 22;
+            this.lockerNumber.Text = "Locker";
+            this.lockerNumber.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // RentLockerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Mandado_LockerSystem.Properties.Resources.LOCKERFORM;
-            this.ClientSize = new System.Drawing.Size(850, 580);
+            this.BackgroundImage = global::Mandado_LockerSystem.Properties.Resources._2;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(571, 434);
+            this.Controls.Add(this.lockerNumber);
             this.Controls.Add(this.cancelBtn);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.lockerNumber);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.btnExit);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RentLockerForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -114,8 +124,8 @@
 
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnConfirm;
-        private System.Windows.Forms.Label lockerNumber;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button cancelBtn;
+        private System.Windows.Forms.Label lockerNumber;
     }
 }

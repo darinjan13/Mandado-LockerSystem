@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.OleDb;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Mandado_LockerSystem.Connection
@@ -11,7 +7,7 @@ namespace Mandado_LockerSystem.Connection
     internal class Connection
     {
         public static OleDbConnection conn;
-        private static string dbconnect = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+ Application.StartupPath +"\\Database1.accdb";
+        private static string dbconnect = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source="+ Application.StartupPath + "\\LockersDB.accdb";
         public static void DB()
         {
             try
